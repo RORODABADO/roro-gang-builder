@@ -64,5 +64,3 @@ To delete a gang (admin only) :
 /deletegang
 
 !!!!When you delete a gang, you also delete the items in the gang's safe!!!!
-
-Translated with DeepL.com (free version)
