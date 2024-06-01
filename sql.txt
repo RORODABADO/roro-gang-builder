@@ -1,0 +1,25 @@
+CREATE TABLE `faction_chests` (
+  `id` int(11) NOT NULL,
+  `faction_name` varchar(50) NOT NULL,
+  `coords` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+ALTER TABLE `faction_chests`
+  ADD PRIMARY KEY (`id`);
+
+
+
+CREATE TABLE `faction_garage` (
+  `id` int(11) NOT NULL,
+  `faction_name` varchar(50) NOT NULL,
+  `coordsgarageentrer` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`coordsgarageentrer`)),
+  `coordsgaragesortir` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`coordsgaragesortir`))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+
+ALTER TABLE `faction_garage`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `faction_garage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+COMMIT;
